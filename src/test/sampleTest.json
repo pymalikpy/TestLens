@@ -1,0 +1,94 @@
+{
+  "testSuite": "Sample Regression Suite",
+  "runId": "RUN-2026-04-19-001",
+  "totalTests": 50,
+  "passed": 42,
+  "failed": 6,
+  "skipped": 2,
+  "tests": [
+    {
+      "id": "TC-001",
+      "name": "Login with valid credentials",
+      "status": "passed",
+      "durationMs": 120,
+      "timestamp": "2026-04-19T10:00:01Z"
+    },
+    {
+      "id": "TC-002",
+      "name": "Login with invalid password",
+      "status": "failed",
+      "durationMs": 98,
+      "timestamp": "2026-04-19T10:00:03Z",
+      "error": {
+        "message": "Expected error message not displayed",
+        "code": "ASSERTION_ERROR"
+      }
+    },
+    {
+      "id": "TC-003",
+      "name": "Password reset flow",
+      "status": "passed",
+      "durationMs": 150,
+      "timestamp": "2026-04-19T10:00:05Z"
+    },
+
+    {
+      "id": "TC-004",
+      "name": "User registration",
+      "status": "passed",
+      "durationMs": 200,
+      "timestamp": "2026-04-19T10:00:08Z"
+    },
+    {
+      "id": "TC-005",
+      "name": "Duplicate user registration",
+      "status": "failed",
+      "durationMs": 180,
+      "timestamp": "2026-04-19T10:00:11Z",
+      "error": {
+        "message": "Duplicate email allowed",
+        "code": "VALIDATION_ERROR"
+      }
+    },
+
+    {
+      "id": "TC-006",
+      "name": "Logout functionality",
+      "status": "passed",
+      "durationMs": 75,
+      "timestamp": "2026-04-19T10:00:13Z"
+    },
+    {
+      "id": "TC-007",
+      "name": "Session timeout",
+      "status": "passed",
+      "durationMs": 300,
+      "timestamp": "2026-04-19T10:00:18Z"
+    },
+    {
+      "id": "TC-008",
+      "name": "Profile update",
+      "status": "passed",
+      "durationMs": 140,
+      "timestamp": "2026-04-19T10:00:22Z"
+    },
+    {
+      "id": "TC-009",
+      "name": "Upload profile picture",
+      "status": "failed",
+      "durationMs": 210,
+      "timestamp": "2026-04-19T10:00:26Z",
+      "error": {
+        "message": "File upload failed",
+        "code": "UPLOAD_ERROR"
+      }
+    },
+    {
+      "id": "TC-010",
+      "name": "Delete account",
+      "status": "skipped",
+      "durationMs": 0,
+      "timestamp": "2026-04-19T10:00:30Z"
+    }
+  ]
+}
