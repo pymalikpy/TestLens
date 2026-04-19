@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# 🚀 TestLens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TestLens is a lightweight test report analyzer that helps engineers quickly understand test failures, identify flaky tests, and get actionable insights from test results.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧠 Why TestLens?
 
-## React Compiler
+In real-world projects:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Test failures are noisy
+* Flaky tests waste debugging time
+* CI pipelines lose reliability
+* Engineers spend time figuring out *what actually failed*
 
-## Expanding the ESLint configuration
+TestLens helps cut through that noise.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* 📂 Upload test result JSON (Playwright/Jest style)
+* 📊 Summary view (Total / Passed / Failed)
+* 🧪 Test list with clear status indicators
+* ⚠️ Flaky test detection (basic heuristic)
+* 🔍 Filter tests (All / Failed / Flaky)
+* 💡 Suggestions for failed tests (possible causes & fixes)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* React + TypeScript
+* Vite
+* Basic CSS (no UI frameworks)
+* FileReader API for local file parsing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📸 Preview
+
+> Upload a test report → instantly see failures, flaky tests, and insights
+
+---
+
+## 🧪 Example Use Case
+
+* Upload CI test results
+* Quickly identify:
+
+  * real failures
+  * flaky tests
+  * potential root causes
+
+---
+
+## ⚠️ Current Limitations
+
+* Flaky detection is heuristic-based (not historical)
+* Suggestions are static (AI integration planned)
+* No backend / persistence yet
+
+---
+
+## 🚀 Future Improvements
+
+* AI-powered failure analysis
+* Historical test tracking
+* CI/CD integration (GitHub Actions, etc.)
+* Team dashboards
+
+---
+
+## 💡 Inspiration
+
+Built from real-world experience in QA and frontend engineering to bridge the gap between test execution and meaningful insights.
+
+---
+
+## 👨‍💻 Author
+
+Prince Malik
+Senior SDET → Frontend Engineer (in transition)
+
+---
+
+## ⭐️ If you find this useful
+
+Give it a star or share your feedback!
